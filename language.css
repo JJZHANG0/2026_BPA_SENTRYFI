@@ -1,0 +1,7 @@
+.language-dialog { color:#e7ecee; background:#1b2025; border:1px solid #526069; border-radius:12px; padding:26px; width:min(380px,90vw); font:16px/1.5 system-ui,sans-serif }
+.language-dialog::backdrop { background:#090e12c9 }
+.language-dialog h2 { margin:0 0 20px; font-size:20px }
+.language-dialog div { display:flex; gap:10px }
+.language-dialog button,.language-switch { cursor:pointer; color:#e7ecee; background:#252c31; border:1px solid #526069; border-radius:5px; padding:7px 12px }
+.language-dialog button { flex:1; min-height:44px; font-size:16px }
+.language-dialog button:focus-visible,.language-switch:focus-visible { outline:2px solid #a5ead1; outline-offset:2px }

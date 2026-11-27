@@ -314,6 +314,8 @@ main .match { border:0; padding:0 }
  .workspace { gap:14px }
 }
 </style>
+<link rel="stylesheet" href="language.css">
+
 </head>
 <body>
 <div id="app"></div>
@@ -4617,5 +4619,6 @@ Ot("room").onchange=()=>{
 var Hh=-1;io.setAnimationLoop(i=>{let t=tn[wn].duration,e=Dl?Math.min(.1,(i-Dl)/1e3):0;on&&(ye=Math.min(t,ye+e)),Dl=i,ye>=t&&(on=!1);let n=cs[Math.round(ye*20)];Jh.forEach((l,c)=>__(c,n.actors[c]));let s=ye*.9%1;Qe.forEach((l,c)=>{f_[c].material.opacity=c===bi?.9:.35,m_[c].position.set(...g_(Te,l.xyz,s))}),oi.update(),io.render(ue,ai);let r=Ti.clientWidth,a=Ti.clientHeight;for(let[l,c]of Yh){let u=c.clone().project(ai);l.style.transform=`translate(${(u.x+1)*r/2}px,${(1-u.y)*a/2}px) translate(-50%,-50%)`}if(i-Hh<80)return;Hh=i,Ot("beat").textContent=tn[wn].beats.filter(([l])=>l<=ye).at(-1)[1];let o=Math.round(ye*20);Ot("packet").textContent=(wn>=6?"\u9884\u8BBE\u98CE\u9669\u60C5\u5883 \xB7 ":"")+`\u6A21\u62DF\u63A2\u6D4B\u5E8F\u53F7 #${o} \xB7 TX1`,Ot("legendText").textContent="\u84DD\u8272\uFF1A\u65E0\u7EBF\u63A2\u6D4B",v_.forEach((l,c)=>{l.textContent=`${Qe[c].id} \xB7 #${o} \xB7 CSI`,l.classList.toggle("arriving",on&&s>.76)}),Ot("links").querySelectorAll("button").forEach((l,c)=>{l.textContent=`${Qe[c].id} \xB7 \u0394\u5E45\u5EA6 ${n.delta[c].toFixed(3)}`,l.setAttribute("aria-pressed",String(c===bi))}),Ot("play").textContent=on?"\u6682\u505C":"\u64AD\u653E",Ot("seek").value=ye,Ot("time").value=`${ye.toFixed(1)} / ${t} s`,y_(n,t),Ot("matchPanel").hidden||S_(Math.round(ye*20),t)});new ResizeObserver(()=>{let i=Ti.clientWidth,t=Ti.clientHeight;i&&t&&(io.setSize(i,t,!1),ai.aspect=i/t,ai.fov=i/t<1?48:38,ai.updateProjectionMatrix())}).observe(Ti);
 
 </script>
+<script defer src="./language.js"></script>
 </body>
 </html>
